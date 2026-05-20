@@ -2,7 +2,7 @@
 
 A modern, interactive 3D portfolio website built with React, Three.js, and GSAP. Featuring a fully animated 3D character, physics-based tech stack visualization, smooth scroll animations, and a premium dark-themed UI.
 
-🔗 **Live Demo:** _Coming Soon_
+🔗 **Live Demo:** https://portfolio-pranjalsahu.vercel.app/
 
 ---
 
@@ -86,7 +86,7 @@ npm install
 npm run dev
 ```
 
-The app will be available at `http://localhost:5173`
+The page will be available at 'https://portfolio-pranjalsahu.vercel.app/'
 
 ### Build for Production
 
