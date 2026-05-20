@@ -41,9 +41,14 @@
   font-weight: 500;
 }
 .navbar-title {
-  font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 0.2px;
+  font-weight: 800;
+  font-size: 24px;
+  letter-spacing: 1px;
+  background: linear-gradient(0deg, #722f37, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 @media only screen and (min-width: 500px) {
   .header {
@@ -58,7 +63,7 @@
     color: #eae5ec;
   }
   .navbar-title {
-    font-size: 16px;
+    font-size: 28px;
   }
 }
 @media only screen and (min-width: 900px) {
@@ -78,6 +83,6 @@
     font-size: 16px;
   }
   .navbar-title {
-    font-size: 18px;
+    font-size: 34px;
   }
 }

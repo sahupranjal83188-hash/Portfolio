@@ -96,8 +96,8 @@ body {
   position: relative;
   height: var(--vh);
   margin: auto;
-  margin-top: 50px;
-  margin-bottom: -100px;
+  margin-top: 200px;
+  margin-bottom: 0;
 }
 
 .techstack h2 {
@@ -109,6 +109,10 @@ body {
   left: 0;
   font-weight: 400;
   text-transform: uppercase;
+}
+
+.techstack h2 > span {
+  color: var(--accentColor);
 }
 
 @media screen and (min-width: 768px) {

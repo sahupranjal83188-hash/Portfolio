@@ -32,7 +32,7 @@ const Scene = () => {
         antialias: true,
       });
       renderer.setSize(container.width, container.height);
-      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
       renderer.toneMapping = THREE.ACESFilmicToneMapping;
       renderer.toneMappingExposure = 1;
       canvasDiv.current.appendChild(renderer.domElement);
@@ -61,8 +61,24 @@ const Scene = () => {
           let character = gltf.scene;
           setChar(character);
           scene.add(character);
+          
+          character.traverse((child: any) => {
+            if (child.isMesh) {
+              const name = child.name.toLowerCase();
+              if (name.includes('shirt') || name.includes('top') || name.includes('pant') || name.includes('bottom')) {
+                if (child.material) {
+                  child.material = child.material.clone();
+                  child.material.color.setHex(0x666666); // Grey color
+                }
+              }
+            }
+          });
+
           headBone = character.getObjectByName("spine006") || null;
           screenLight = character.getObjectByName("screenlight") || null;
+
+
+
           progress.loaded().then(() => {
             setTimeout(() => {
               light.turnOnLights();
