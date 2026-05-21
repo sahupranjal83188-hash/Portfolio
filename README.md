@@ -86,8 +86,6 @@ npm install
 npm run dev
 ```
 
-The page will be available at 'https://portfolio-pranjalsahu.vercel.app/'
-
 ### Build for Production
 
 ```bash
